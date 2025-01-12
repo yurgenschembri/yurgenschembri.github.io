@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - nextjs-static
 
 permissions:
   contents: read
