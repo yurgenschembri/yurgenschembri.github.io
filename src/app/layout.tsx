@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Yurgen Schembri Xuereb",
-  description: "AI Professional, Web Developer, Software Architect, Cloud Applications Consultant",
+  description: "Web Developer, Software Architect, Cloud Applications Consultant",
 };
 
 export default function RootLayout({

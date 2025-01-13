@@ -7,7 +7,6 @@ export default function Home() {
         <h1 className="text-white">Yurgen Schembri Xuereb</h1>
 
         <div className="flex flex-col items-center font-extralight text-sm">
-          <a className="text-gray-400" href="#ai">AI Professional</a>
           <a className="text-gray-400" href="#web">Web Developer</a>
           <a className="text-gray-400" href="#software">Software Architect</a>
           <a className="text-gray-400" href="#cloud">Cloud Applications Consultant</a>
