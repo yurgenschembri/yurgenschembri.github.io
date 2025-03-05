@@ -1,28 +1,74 @@
-import LinkedInIcon from './components/icons/linkedin-icon';
+"use client";
+
+import {
+  Parallax,
+  ParallaxContent,
+  ParallaxContentWithEffect,
+  ParallaxSection,
+} from "@/components/containers/parallax";
+import XParallaxExample from "@/components/x-parallax-example";
+
+import { RefObject, useRef } from "react";
 
 export default function Home() {
+  const ref1 = useRef<HTMLElement>(null);
+  const ref2 = useRef<HTMLElement>(null);
+  const ref3 = useRef<HTMLElement>(null);
+
   return (
-    <div className="bg-gray-800 w-screen h-screen flex flex-col items-center justify-center">
-      <div className="border-2 border-sky-500/30 border-solid rounded-md p-8 flex flex-col items-center gap-6">
-        <h1 className="text-white">Yurgen Schembri Xuereb</h1>
+    <>
+      <style>{`html { scroll-snap-type: y mandatory; }`}</style>
+      <Parallax>
+        <ParallaxSection className="bg-aqua-500 flex justify-center items-center h-screen">
+          <ParallaxContent
+            ref={ref1 as RefObject<HTMLDivElement>}
+            className="w-[75%] h-[70%] absolute shadow-lg shadow-gray-600"
+          >
+            <XParallaxExample />
+          </ParallaxContent>
+          {ref1 && (
+            <>
+              <ParallaxContentWithEffect
+                className="relative -top-[30%] left-[30%] text-right p-1 text-white font-bold text-3xl"
+                contentRef={ref1 as RefObject<HTMLElement>}
+                distanceY={300}
+              >
+                <h2>#001</h2>
+              </ParallaxContentWithEffect>
+            </>
+          )}
+        </ParallaxSection>
 
-        <div className="flex flex-col items-center font-extralight text-sm">
-          <a className="text-gray-400" href="#web">Web Developer</a>
-          <a className="text-gray-400" href="#software">Software Architect</a>
-          <a className="text-gray-400" href="#cloud">Cloud Applications Consultant</a>
-        </div>
+        <ParallaxSection className="bg-cream-500 flex justify-center items-center h-screen">
+          <ParallaxContent
+            ref={ref2 as RefObject<HTMLDivElement>}
+            className="w-64 max-w-screen bg-blue-500 absolute top-1/3"
+          >
+            world
+            <textarea></textarea>
+          </ParallaxContent>
+          <ParallaxContentWithEffect
+            className="top-1/2 left-1/2"
+            contentRef={ref2 as RefObject<HTMLElement>}
+            distanceY={200}
+          >
+            #002
+          </ParallaxContentWithEffect>
+        </ParallaxSection>
 
-        <div className="text-gray-300 font-mono flex flex-row gap-4 items-center">
-          <a href="mailto:info@yurgenschembri.com" target="_blank" aria-label="Email"
-            className="px-4 py-2 no-underline text-blue-100  bg-sky-500 rounded hover:bg-sky-600 focus:bg-sky-600 active:bg-sky-400 transition-colors ease-in-out duration-200">
-            Get in touch {">"}.
-          </a>
-          <a href="https://www.linkedin.com/in/yurgenschembri/" target="_blank" aria-label="LinkedIn"
-            className="text-sky-500 hover:text-sky-600 focus:text-sky-600 active:text-sky-400 p-1">
-            <LinkedInIcon />
-          </a>
-        </div>
-      </div>
-    </div>
+        <ParallaxSection className="bg-aqua-500 flex justify-center items-center h-screen">
+          <ParallaxContent ref={ref3 as RefObject<HTMLDivElement>}>
+            whatsup
+          </ParallaxContent>
+          <ParallaxContentWithEffect
+            className="left-2/3 top-2/3"
+            contentRef={ref3 as RefObject<HTMLElement>}
+            distanceY={100}
+          >
+            #003
+          </ParallaxContentWithEffect>
+        </ParallaxSection>
+      </Parallax>
+    </>
   );
 }
