@@ -2,9 +2,9 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/layout/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -13,7 +13,9 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        "mono": ["monospace"]
+        "serif": ["Cambria"],
+        "sans": ["Bahnschrift"],
+        "mono": ["Monospace"]
       }
     },
   },
