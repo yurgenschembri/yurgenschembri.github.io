@@ -3,9 +3,8 @@ import "./globals.css";
 import { AppLayout } from "@/layout/app-layout";
 
 export const metadata: Metadata = {
-  title: "Yurgen Schembri Xuereb",
-  description:
-    "Web Developer, Software Architect, Cloud Applications Consultant",
+  title: "yurgenschembri",
+  description: "Web Developer, Software Architect, Mentor",
 };
 
 export default function RootLayout({
