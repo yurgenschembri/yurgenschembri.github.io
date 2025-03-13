@@ -15,7 +15,7 @@ export default function CallToActionLink({
   return (
     <Link
       className={clsx(
-        "p-1 rounded-sm bg-onyx-300 text-onyx-800 transition-colors shadow-md",
+        "inline-block p-1 rounded-sm bg-onyx-300 text-onyx-800 transition-colors shadow-md",
         "hover:bg-onyx-400 hover:text-onyx-900 hover:shadow-lg",
         "focus:bg-onyx-400 focus:text-onyx-900 focus:shadow-lg focus:outline-none",
         className

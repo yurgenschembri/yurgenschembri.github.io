@@ -13,8 +13,13 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="bg-[url(/img/bg-home.jpg)] bg-cover bg-fixed">
-      <header className="pt-24 px-6 min-h-screen flex flex-col justify-around items-center text-center bg-onyx-900/75">
-        <h1 className="text-4xl/snug font-bold font-serif sm:w-3/4 md:w-2/3 lg:w-1/2">
+      <div
+        className={clsx(
+          "pt-24 min-h-dvh flex flex-col justify-around items-center text-center",
+          "bg-gradient-to-b from-wheat-900/75 to-onyx-900/75"
+        )}
+      >
+        <h1 className="mx-6 sm:w-3/4 md:w-2/3 lg:w-1/2 text-4xl/snug font-bold font-serif">
           Helping{" "}
           <CallToActionLink href="/services/for-businesses">
             Small Businesses
@@ -44,7 +49,7 @@ export default function HomePage() {
             <LinkedInIcon />
           </CallToActionLink>
         </div>
-      </header>
+      </div>
     </div>
   );
 }

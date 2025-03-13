@@ -7,7 +7,7 @@ type AppLayoutProps = {
 
 export function AppLayout(props: Readonly<AppLayoutProps>) {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-dvh flex flex-col">
       <AppNav />
       {props.children}
     </div>

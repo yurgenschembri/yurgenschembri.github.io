@@ -15,9 +15,9 @@ export default function AppLink({
   return (
     <Link
       className={clsx(
-        "p-1 rounded-sm text-onyx-600 transition-colors",
-        "hover:bg-onyx-800 hover:text-onyx",
-        "focus:bg-onyx-800 focus:text-onyx focus:outline-none",
+        "p-1 rounded-sm text-onyx transition-colors",
+        "hover:bg-wheat-800 hover:text-onyx-400",
+        "focus:bg-wheat-800 focus:text-onyx-400 focus:outline-none",
         className
       )}
       {...props}
