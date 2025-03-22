@@ -9,7 +9,7 @@ on:
   push:
     branches: 
       - master
-      - nextjs-static
+      - landing-page
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
